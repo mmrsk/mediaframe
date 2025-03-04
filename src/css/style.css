@@ -1,0 +1,263 @@
+@import url(normalize.css);
+@import url(reset.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+/*  */
+
+/* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+    --step--2: clamp(0.6944rem, 0.6577rem + 0.1836vw, 0.8rem);
+    --step--1: clamp(0.8333rem, 0.7754rem + 0.2899vw, 1rem);
+    --step-0: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
+    --step-1: clamp(1.2rem, 1.0739rem + 0.6304vw, 1.5625rem);
+    --step-2: clamp(1.44rem, 1.2615rem + 0.8924vw, 1.9531rem);
+    --step-3: clamp(1.728rem, 1.4799rem + 1.2407vw, 2.4414rem);
+    --step-4: clamp(2.0736rem, 1.7334rem + 1.7011vw, 3.0518rem);
+    --step-5: clamp(2.4883rem, 2.027rem + 2.3067vw, 3.8147rem);
+  }
+
+
+/* Font Usage */
+
+html {
+    font-family: 'Inter', Helvetica, Arial ,sans-serif !important;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+}
+h2 {
+    text-transform: uppercase;
+}
+h3 {
+    margin-bottom: 1.5rem;
+    font-size: var(--step-2);
+}
+p {
+    font-size: var(--step-0);
+    font-weight: 400;
+}
+
+/* Layout */
+
+section.feature {
+    padding: 10rem 0;
+}
+.content {
+    margin: 0 auto;
+    max-width: 59rem;
+}
+.grid-wrap {
+    display: grid;
+    grid-gap: 1rem;;
+}
+ul[class] {
+  margin:0;
+  padding-left:0;
+}
+.section-header {
+    display: block;
+    padding: 2rem;
+    width: 15rem;
+    aspect-ratio: 1 / 1;
+}
+
+/* HEADER */
+
+header#header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    padding: 2rem;
+    background: #fff;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+.nav {
+    display: flex;
+}
+.nav li {
+    list-style: none;
+}
+.nav li:not(:last-child) {
+    margin-right: 2rem;
+}
+.nav li a {
+    font-size: var(--step-0);
+    text-decoration: none;
+}
+
+/* HERO */
+
+.hero {
+    padding: 2.5rem;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    align-items: end;
+    background: url(../img/mediaFrame-symbol.svg) top left no-repeat;
+    background-size: contain;
+}
+.tagline {
+    grid-column: 2 / -1;
+    font-size: var(--step-3);
+    font-weight: 600;
+    align-self: center;
+}
+.wordmark {
+    grid-column: span 2;
+}
+
+/* STATEMENT */
+
+#statement {
+    padding: 5rem;
+    width: 100%;
+    height: 64rem;
+    display: flex;
+    justify-content: flex-end;
+    background: url(../img/mediaFrame-symbol-isometric.svg) #d4d4d4 32% 64% no-repeat fixed;
+}
+#statement p {
+    width: 50%;
+    font-size: 2rem;
+    line-height: 140%;
+}
+#statement p em {
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+/* OUR EXPERTISE */
+
+#expertise .content.grid-wrap {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 5rem 26rem 26rem auto;
+}
+
+#expertise .section-header {
+    background: #000;
+    color:#fff;
+    grid-column: span 4;
+}
+.expertise {
+    display: block;
+    padding: 3rem;
+    aspect-ratio: 1 / 1;
+}
+.expertise-1 {
+    grid-column: 5 / -1;
+    grid-row-start: 2;
+    background-color: #e5e5e5;
+}
+.expertise-2 {
+    grid-column: span 7;
+    grid-row-start: 3;
+    background-color: #f5f5f5;
+    z-index: 100;
+}
+.expertise-3 {
+    grid-column: 7 / -1;
+    grid-row-start: 4;
+    background-color: #e5e5e5;
+    z-index: 200;
+}
+
+/* OUR ADVANTAGE */
+
+#advantage {
+    background: #000;
+    color: #fff;
+}
+#advantage .section-header {
+    margin-bottom: 8rem;
+    border: 2px solid#fff;
+    color:#fff;
+}
+
+
+
+.list-advantage .grid-wrap {
+    grid-template-columns: 41.666667% auto;
+}
+.list-advantage li:not(:last-child) {
+    margin-bottom: 6rem;
+}
+
+/* INDUSTRIES WE SERVE */
+
+#industries .grid-wrap {
+    grid-template-columns: 1fr 2fr;
+}
+#industries .section-header {
+    border: 2px solid#000;
+    color:#000;
+    position: sticky;
+    top: 7rem;
+}
+.industries > li:not(:last-child) {
+    margin-bottom: 4rem;
+}
+.capabilities li {
+    margin-left: 1rem;
+    list-style: disc;
+}
+
+/* OUR VENTURES */
+
+#ventures {
+    background: #f5f5f5;
+}
+#ventures h2 {
+    margin-bottom: 8rem;
+    text-align: center;
+}
+.list-ventures {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.list-ventures li {
+    margin: 0 2rem;
+    width: 18rem;
+    aspect-ratio: 1 / 1;
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+/* CONTACT */
+
+#contact {
+    padding: 8rem 2.5rem 2.5rem 2.5rem;
+    background: #525252;
+}
+
+#contact .grid-wrap {
+    margin-bottom: 12rem;;
+    grid-template-columns: 41.666667% auto;
+}
+#contact .section-header {
+    background: #fff;
+    color:#000;
+}
+#contact p {
+    margin-bottom: 2rem;
+    color: #fff;
+}
+#contact .email a {
+    font-size: var(--step-3);
+    font-weight: 600;
+    text-decoration: none;
+}
+#contact .logo-outlined {
+    opacity: 0.10;
+}
